@@ -46,3 +46,11 @@ class Analysis:
         in the text file located at `file_path`.
         """
         return self.devs
+
+    def freq_of_lang(self):
+        """
+        Returns a dictionary with the number of times each language appears
+        in the `self.devs` list, where language is a key and the frequency
+        of the language is the value
+        """
+        return {}
