@@ -1,6 +1,6 @@
 ## Analysis Class Design Document
-- Developer: 
-- Date: 
+- Developer: Swathi Danturi
+- Date: 11/11/2024
 
 ### (replace with method name) Method Design
 ...

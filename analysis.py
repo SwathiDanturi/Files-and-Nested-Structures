@@ -4,8 +4,9 @@ Practice with classes, files, and nested structures.
 File: analysis.py
 Initial developers: COMP 801 instructors
 Data source: https://insights.stackoverflow.com/survey
-Developer:
+Developer: Swathi Danturi
 """
+
 import csv
 
 
@@ -13,6 +14,7 @@ class Analysis:
     """
     Analyze developer data from the Stack Overflow 2024 survey.
     """
+
     def __init__(self, file_path):
         """
         Initialize instance variable `self.devs` list with dictionary objects.
@@ -29,10 +31,10 @@ class Analysis:
         """
         self.devs = []
         try:
-            with open(file_path, mode='r', encoding='utf-8') as csv_file:
+            with open(file_path, mode="r", encoding="utf-8") as csv_file:
                 csv_reader = csv.DictReader(
-                    csv_file, delimiter=',', quotechar='"'
-                )
+                    csv_file, delimiter=",", quotechar='"'
+                    )
                 self.devs = list(csv_reader)
         except IOError as err:
             print(err)
