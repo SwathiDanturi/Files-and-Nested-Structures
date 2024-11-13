@@ -21,8 +21,20 @@
             - increment the count of `lang_freq` of `language` by 1
 - return `lang_freq`
 
-### (replace with method name) Method Design
-...
+### lang_histogram() Method Design
+- `self` is the current instance of the class
+- `self.devs` is the instance variable of the class
+    - the elements of the list are dictionaries
+    - each dictionary corresponds to a row in the text file
+- define an accumulator `lang_histo` and initialize it to an empty dictionary
+- call `freq_of_lang` method using the class instance `self`
+- assign the return value of it to the variable `lang_freq`
+- `lang_freq` contains key-value pairs of language-frequency
+- using `for` loop iterate through the items of `lang_freq` with `lang,freq` as iterators
+- at each iteration:
+    - check if `freq` is in `lang_histo`
+        - if not, then initialize `freq` of `lang_histo` to an empty list
+    - append `lang` to `lang_histo` at the key `freq`
 
 ### (replace with method name) Method Design
 
