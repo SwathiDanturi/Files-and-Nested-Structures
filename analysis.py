@@ -51,6 +51,15 @@ class Analysis:
         """
         Returns a dictionary with the number of times each language appears
         in the `self.devs` list, where language is a key and the frequency
-        of the language is the value
+        of the language is the value.
+        """
+        return {}
+
+    def lang_histogram(self):
+        """
+        Returns a dictionary with the number of developers who know a
+        certain number of languages, where the number of languages is a key
+        and the list of languages known by that number of developers is the
+        value.
         """
         return {}
