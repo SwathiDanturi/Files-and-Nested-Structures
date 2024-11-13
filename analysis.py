@@ -63,3 +63,8 @@ class Analysis:
         value.
         """
         return {}
+
+    def write_lang_popularity(self):
+        """
+        Writes the popularity of languages into a new CSV file.
+        """
