@@ -16,6 +16,7 @@ def test_write_lang_popularity_for_devops1csv():
     """
     test_write_lang_popularity = Analysis("./devops1.csv")
     test_write_lang_popularity.write_lang_popularity()
+    # using constructor to read the file instead of reading the file again
     test_write_lang_popularity_for_file1csv = Analysis("./devopswrite.csv")
     actual = test_write_lang_popularity_for_file1csv.devs
     expected = [{'Frequency': '1', 'Languages': 'Assembly;C#;C++;SQL'}]
@@ -28,6 +29,7 @@ def test_write_lang_popularity_for_devops5csv():
     """
     test_write_lang_popularity = Analysis("./devops5.csv")
     test_write_lang_popularity.write_lang_popularity()
+    # using constructor to read the file instead of reading the file again
     test_write_lang_popularity_for_file1csv = Analysis("./devopswrite.csv")
     actual = test_write_lang_popularity_for_file1csv.devs
     expected = [
@@ -47,6 +49,7 @@ def test_write_lang_popularity_for_devops10csv():
     """
     test_write_lang_popularity = Analysis("./devops10.csv")
     test_write_lang_popularity.write_lang_popularity()
+    # using constructor to read the file instead of reading the file again
     test_write_lang_popularity_for_file1csv = Analysis("./devopswrite.csv")
     actual = test_write_lang_popularity_for_file1csv.devs
     expected = [
