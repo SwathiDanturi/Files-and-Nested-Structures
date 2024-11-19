@@ -70,7 +70,13 @@ class Analysis:
         and the list of languages known by that number of developers is the
         value.
         """
-        return {}
+        lang_histo = {}
+        lang_freq = self.freq_of_lang()
+        for lang, freq in lang_freq.items():
+            if freq not in lang_histo:
+                lang_histo[freq] = []
+            lang_histo[freq].append(lang)
+        return lang_histo
 
     def write_lang_popularity(self):
         """
