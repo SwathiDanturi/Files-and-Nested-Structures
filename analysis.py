@@ -82,3 +82,15 @@ class Analysis:
         """
         Writes the popularity of languages into a new CSV file.
         """
+        lang_histogram = self.lang_histogram()
+        try:
+            with open("devopswrite.csv", mode="w", encoding="utf-8",
+                      newline='') as new_csv_file:
+                csv_write = csv.writer(new_csv_file)
+                csv_write.writerow(['Frequency', 'Languages'])
+                for freq, langs in lang_histogram.items():
+                    langs = ';'.join(langs)
+                    csv_write.writerow([freq, langs])
+            new_csv_file.close()
+        except IOError as err:
+            print(err)
