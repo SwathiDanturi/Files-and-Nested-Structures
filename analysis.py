@@ -53,7 +53,15 @@ class Analysis:
         in the `self.devs` list, where language is a key and the frequency
         of the language is the value.
         """
-        return {}
+        lang_freq = {}
+        for dev_data in self.devs:
+            languages_admired = dev_data["LanguageAdmired"].split(";")
+            for language in languages_admired:
+                if language != 'NA':
+                    if language not in lang_freq:
+                        lang_freq[language] = 0
+                    lang_freq[language] += 1
+        return lang_freq
 
     def lang_histogram(self):
         """
