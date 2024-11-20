@@ -32,9 +32,7 @@ class Analysis:
         self.devs = []
         try:
             with open(file_path, mode="r", encoding="utf-8") as csv_file:
-                csv_reader = csv.DictReader(
-                    csv_file, delimiter=",", quotechar='"'
-                    )
+                csv_reader = csv.DictReader(csv_file, delimiter=",", quotechar='"')
                 self.devs = list(csv_reader)
         except IOError as err:
             print(err)
@@ -57,7 +55,7 @@ class Analysis:
         for dev_data in self.devs:
             languages_admired = dev_data["LanguageAdmired"].split(";")
             for language in languages_admired:
-                if language != 'NA':
+                if language != "NA":
                     if language not in lang_freq:
                         lang_freq[language] = 0
                     lang_freq[language] += 1
@@ -84,12 +82,13 @@ class Analysis:
         """
         lang_histogram = self.lang_histogram()
         try:
-            with open("devopswrite.csv", mode="w", encoding="utf-8",
-                      newline='') as new_csv_file:
+            with open(
+                "devopswrite.csv", mode="w", encoding="utf-8", newline=""
+            ) as new_csv_file:
                 csv_write = csv.writer(new_csv_file)
-                csv_write.writerow(['Frequency', 'Languages'])
+                csv_write.writerow(["Frequency", "Languages"])
                 for freq, langs in lang_histogram.items():
-                    langs = ';'.join(langs)
+                    langs = ";".join(langs)
                     csv_write.writerow([freq, langs])
             new_csv_file.close()
         except IOError as err:

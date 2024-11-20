@@ -19,7 +19,7 @@ def test_write_lang_popularity_for_devops1csv():
     # using constructor to read the file instead of reading the file again
     test_write_lang_popularity_for_file1csv = Analysis("./devopswrite.csv")
     actual = test_write_lang_popularity_for_file1csv.devs
-    expected = [{'Frequency': '1', 'Languages': 'Assembly;C#;C++;SQL'}]
+    expected = [{"Frequency": "1", "Languages": "Assembly;C#;C++;SQL"}]
     assert actual == expected
 
 
@@ -33,13 +33,14 @@ def test_write_lang_popularity_for_devops5csv():
     test_write_lang_popularity_for_file1csv = Analysis("./devopswrite.csv")
     actual = test_write_lang_popularity_for_file1csv.devs
     expected = [
-                {'Frequency': '3', 'Languages': 'C#;SQL'},
-                {'Frequency': '2', 'Languages': 'C++;Bash/Shell (all shells)'},
-                {'Frequency': '1',
-                 'Languages':
-                 'HTML/CSS;Java;JavaScript;Python;Go;Assembly;C;MATLAB;'
-                 'PowerShell'}
-            ]
+        {"Frequency": "3", "Languages": "C#;SQL"},
+        {"Frequency": "2", "Languages": "C++;Bash/Shell (all shells)"},
+        {
+            "Frequency": "1",
+            "Languages": "HTML/CSS;Java;JavaScript;Python;Go;Assembly;C;MATLAB;"
+            "PowerShell",
+        },
+    ]
     assert actual == expected
 
 
@@ -53,13 +54,12 @@ def test_write_lang_popularity_for_devops10csv():
     test_write_lang_popularity_for_file1csv = Analysis("./devopswrite.csv")
     actual = test_write_lang_popularity_for_file1csv.devs
     expected = [
-                {'Frequency': '2', 'Languages': 'Bash/Shell (all shells);Lua'},
-                {'Frequency': '1',
-                 'Languages': 'Go;C#;PowerShell;SQL;C++;Swift;R'},
-                {'Frequency': '5', 'Languages': 'HTML/CSS;JavaScript'},
-                {'Frequency': '3', 'Languages': 'Java'},
-                {'Frequency': '4', 'Languages': 'Python;TypeScript'}
-            ]
+        {"Frequency": "2", "Languages": "Bash/Shell (all shells);Lua"},
+        {"Frequency": "1", "Languages": "Go;C#;PowerShell;SQL;C++;Swift;R"},
+        {"Frequency": "5", "Languages": "HTML/CSS;JavaScript"},
+        {"Frequency": "3", "Languages": "Java"},
+        {"Frequency": "4", "Languages": "Python;TypeScript"},
+    ]
     assert actual == expected
 
 

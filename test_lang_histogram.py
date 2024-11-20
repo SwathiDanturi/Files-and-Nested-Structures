@@ -26,10 +26,21 @@ def test_lang_histogram_for_devops5csv():
     """
     test_lang_histo = Analysis("./devops5.csv")
     actual = test_lang_histo.lang_histogram()
-    expected = {3: ['C#', 'SQL'],
-                2: ['C++', 'Bash/Shell (all shells)'],
-                1: ['HTML/CSS', 'Java', 'JavaScript', 'Python', 'Go',
-                    'Assembly', 'C', 'MATLAB', 'PowerShell']}
+    expected = {
+        3: ["C#", "SQL"],
+        2: ["C++", "Bash/Shell (all shells)"],
+        1: [
+            "HTML/CSS",
+            "Java",
+            "JavaScript",
+            "Python",
+            "Go",
+            "Assembly",
+            "C",
+            "MATLAB",
+            "PowerShell",
+        ],
+    }
     assert actual == expected
 
 
@@ -39,11 +50,13 @@ def test_lang_histogram_for_devops10csv():
     """
     test_lang_histo = Analysis("./devops10.csv")
     actual = test_lang_histo.lang_histogram()
-    expected = {2: ['Bash/Shell (all shells)', 'Lua'],
-                1: ['Go', 'C#', 'PowerShell', 'SQL', 'C++', 'Swift', 'R'],
-                5: ['HTML/CSS', 'JavaScript'],
-                3: ['Java'],
-                4: ['Python', 'TypeScript']}
+    expected = {
+        2: ["Bash/Shell (all shells)", "Lua"],
+        1: ["Go", "C#", "PowerShell", "SQL", "C++", "Swift", "R"],
+        5: ["HTML/CSS", "JavaScript"],
+        3: ["Java"],
+        4: ["Python", "TypeScript"],
+    }
     assert actual == expected
 
 
